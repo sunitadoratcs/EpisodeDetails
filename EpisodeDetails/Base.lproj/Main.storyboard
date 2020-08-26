@@ -85,7 +85,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="5WU-Q2-GVk" firstAttribute="leading" secondItem="48a-g7-GVX" secondAttribute="leading" id="LXQ-TW-vFJ"/>
                             <constraint firstItem="5WU-Q2-GVk" firstAttribute="trailing" secondItem="48a-g7-GVX" secondAttribute="trailing" id="S9J-O0-b6P"/>

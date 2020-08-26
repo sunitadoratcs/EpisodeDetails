@@ -21,8 +21,9 @@ struct APIManager {
                         let response = try JSONDecoder().decode(EpisodeResults.self, from: data)
                         completion(response)
                     }
-                } catch {
+                } catch let error {
                         //do error handling for parsing
+                    print(error)
                     }
             }.resume()
         }

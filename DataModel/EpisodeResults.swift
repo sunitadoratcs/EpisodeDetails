@@ -10,4 +10,12 @@ import Foundation
 
 struct EpisodeResults: Codable {
     let results: [Episode]
+    let info: Info
+}
+
+struct Info: Codable {
+    let pages: Int
+    let count: Int
+    let next: String?
+    let prev: String?
 }

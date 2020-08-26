@@ -14,12 +14,14 @@ class EpisodeDetailsViewController: UIViewController {
     @IBOutlet weak var airDate: UILabel!
     @IBOutlet weak var created: UILabel!
     var episodeModel: Episode?
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        name.text = episodeModel?.name
-        airDate.text = episodeModel?.air_date
-        created.text = episodeModel?.created
+        if let episodeModel = episodeModel {
+            name.text = "Name: \(episodeModel.name)"
+            airDate.text = "AirDate: \(episodeModel.air_date)"
+            created.text = "Created: \(episodeModel.created)"
+        }
     }
 }

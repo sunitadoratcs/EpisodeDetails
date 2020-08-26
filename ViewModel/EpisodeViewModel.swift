@@ -11,11 +11,17 @@ import Foundation
 class EpisodeViewModel {
     var urlString: String?
     var episodeResults: [Episode]?
+    var episodeInfo: Info?
     
     func getEpisodes(completion: @escaping () -> Void) {
         if let urlString = urlString {
             APIManager.getEpisodeDetails(url: urlString) { (results) in
-                self.episodeResults = results.results
+                if let _ = self.episodeResults {
+                    self.episodeResults?.append(contentsOf: results.results)
+                } else {
+                    self.episodeResults = results.results
+                }
+                self.episodeInfo = results.info
                 completion()
             }
         }
